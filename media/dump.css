@@ -1,0 +1,112 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 12px;
+  margin: 0;
+}
+
+/* ── Tables ─────────────────────────────────────────────── */
+.dump-table {
+  border-collapse: collapse;
+  margin: 2px 0;
+  min-width: 120px;
+}
+
+.dump-table td {
+  border: 1px solid #444;
+  padding: 3px 6px;
+  vertical-align: top;
+}
+
+/* ── Header row (clickable toggle) ──────────────────────── */
+.dump-header {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.dump-header::before {
+  content: '\25be ';
+  font-size: 10px;
+}
+
+.dump-header.collapsed::before {
+  content: '\25b8 ';
+}
+
+/* ── Element table ───────────────────────────────────────── */
+.type-element > thead > tr > th {
+  background: #3d1f60;
+  color: #c586c0;
+  border: 1px solid #7040b0;
+}
+
+.type-element > tbody > tr > td:first-child {
+  background: #2a1545;
+  color: #c586c0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.type-element > tbody > tr > td {
+  background: #1a1428;
+}
+
+/* ── Attribute rows ──────────────────────────────────────── */
+.type-element > tbody > tr > td.attr-key {
+  background: #0d3830;
+  color: #4ec9b0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.type-element > tbody > tr > td.attr-key + td {
+  background: #091f1a;
+}
+
+/* ── #text rows ──────────────────────────────────────────── */
+.type-element > tbody > tr > td.text-key {
+  background: #3a2e00;
+  color: #dcdcaa;
+  font-weight: 600;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.type-element > tbody > tr > td.text-key + td {
+  background: #1e1900;
+}
+
+/* ── Scalar values ───────────────────────────────────────── */
+.val-string      { color: #ce9178; white-space: pre-wrap; }
+.val-string-empty { font-style: italic; opacity: 0.9; }
+.val-attr        { color: #9cdcfe; }
+.val-null        { color: #808080; font-style: italic; }
+
+/* ── Empty marker ────────────────────────────────────────── */
+.dump-empty {
+  color: #666;
+  font-style: italic;
+  padding: 2px 6px;
+}
+
+/* ── Parse error ─────────────────────────────────────────── */
+.parse-error {
+  color: #f44747;
+  font-family: monospace;
+  white-space: pre-wrap;
+  padding: 8px;
+  border: 1px solid #f44747;
+  border-radius: 3px;
+  background: #2a0000;
+}

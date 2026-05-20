@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog version="2" generated="2026-05-20">
+
+  <metadata>
+    <title>Product Catalog</title>
+    <description>Demo XML for testing XML Dump</description>
+    <empty-element />
+  </metadata>
+
+  <products>
+
+    <product id="1001" inStock="true" category="electronics">
+      <name>Wireless Headphones</name>
+      <price currency="USD">79.99</price>
+      <rating>4.5</rating>
+      <tags>
+        <tag>audio</tag>
+        <tag>wireless</tag>
+        <tag>bluetooth</tag>
+      </tags>
+      <specs>
+        <spec name="battery">30 hours</spec>
+        <spec name="driver">40mm</spec>
+        <spec name="weight">250g</spec>
+      </specs>
+    </product>
+
+    <product id="1002" inStock="false" category="accessories">
+      <name>USB-C Hub</name>
+      <price currency="USD">34.50</price>
+      <rating>4.1</rating>
+      <tags>
+        <tag>usb</tag>
+        <tag>hub</tag>
+      </tags>
+      <specs>
+        <spec name="ports">7</spec>
+        <spec name="power-delivery">100W</spec>
+      </specs>
+    </product>
+
+    <product id="1003" inStock="true" category="storage">
+      <name>Portable SSD</name>
+      <price currency="EUR">89.00</price>
+      <rating>4.8</rating>
+      <tags>
+        <tag>storage</tag>
+        <tag>ssd</tag>
+        <tag>portable</tag>
+        <tag>fast</tag>
+      </tags>
+      <specs>
+        <spec name="capacity">1TB</spec>
+        <spec name="read-speed">1050 MB/s</spec>
+        <spec name="write-speed">1000 MB/s</spec>
+        <spec name="interface">USB 3.2 Gen 2</spec>
+      </specs>
+    </product>
+
+  </products>
+
+  <regions>
+    <region code="US" tax="0.08" />
+    <region code="EU" tax="0.20" />
+    <region code="CA" tax="0.13" />
+  </regions>
+
+</catalog>

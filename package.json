@@ -1,0 +1,106 @@
+{
+  "name": "xml-dump",
+  "publisher": "EdgeInformation",
+  "displayName": "XML Dump",
+  "description": "Renders .xml documents in an interactive cfdump-style webview",
+  "author": {
+    "name": "Kevin Miller"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/websolete/xml-dump.git"
+  },
+  "homepage": "https://github.com/websolete/xml-dump#readme",
+  "bugs": {
+    "url": "https://github.com/websolete/xml-dump/issues"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#17324d",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "xml",
+    "dump",
+    "inspector",
+    "viewer",
+    "tree",
+    "cfdump",
+    "webview"
+  ],
+  "markdown": "github",
+  "pricing": "Free",
+  "extensionKind": [
+    "ui"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "xmlDump.showDump",
+        "title": "XML Dump"
+      },
+      {
+        "command": "xmlDump.sortAlpha",
+        "title": "Sort Attrs A→Z",
+        "icon": "$(sort-precedence)"
+      },
+      {
+        "command": "xmlDump.sortNatural",
+        "title": "Natural Attr Order",
+        "icon": "$(list-unordered)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "xmlDump.sortAlpha",
+          "when": "activeWebviewPanelId == xmlDump && !xmlDump.isSortedAlpha",
+          "group": "navigation"
+        },
+        {
+          "command": "xmlDump.sortNatural",
+          "when": "activeWebviewPanelId == xmlDump && xmlDump.isSortedAlpha",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "xmlDump.showDump",
+          "when": "resourceExtname == .xml",
+          "group": "navigation"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "xmlDump.showDump",
+          "when": "resourceExtname == .xml",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "package:vsix": "vsce package",
+    "publish:marketplace": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.9.1",
+    "typescript": "^5.3.0"
+  }
+}
