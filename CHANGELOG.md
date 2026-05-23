@@ -2,6 +2,12 @@
 
 All notable changes to XML Dump will be documented in this file.
 
+## 0.1.0
+
+- Prepared the extension for Marketplace publishing with public GitHub repository metadata and release automation.
+- Updated the dump panel title to include the active XML file name and aligned file handling with VS Code-native URI APIs.
+- Refined the dump presentation with refreshed element styling and an updated extension icon.
+
 ## 0.0.1
 
 - Initial release of XML Dump.
