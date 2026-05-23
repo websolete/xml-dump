@@ -46,20 +46,20 @@ body {
 
 /* ── Element table ───────────────────────────────────────── */
 .type-element > thead > tr > th {
-  background: #3d1f60;
-  color: #c586c0;
-  border: 1px solid #7040b0;
+  background: #2f2a44;
+  color: #d4c6df;
+  border: 1px solid #5b5574;
 }
 
 .type-element > tbody > tr > td:first-child {
-  background: #2a1545;
-  color: #c586c0;
+  background: #262136;
+  color: #d4c6df;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .type-element > tbody > tr > td {
-  background: #1a1428;
+  background: #161520;
 }
 
 /* ── Attribute rows ──────────────────────────────────────── */
