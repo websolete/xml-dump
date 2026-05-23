@@ -4,6 +4,10 @@ src/**
 node_modules/**
 .gitignore
 tsconfig.json
+.copirate/**
 .github/**
+**/.copirate/**
 **/.github/**
+schemas/**
+scripts/**
 *.sample.xml

@@ -94,8 +94,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
-    "package:vsix": "vsce package",
-    "publish:marketplace": "vsce publish"
+    "package:vsix": "vsce package"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
