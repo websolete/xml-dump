@@ -2,8 +2,9 @@ node_modules/
 out/
 *.vsix
 .copirate/
+/schemas/
+/schemas/**
 .vscode/
 .github/*
 !.github/workflows/
 !.github/workflows/**
-schemas/
