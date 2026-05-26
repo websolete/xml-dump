@@ -2,6 +2,10 @@
 
 All notable changes to XML Dump will be documented in this file.
 
+## 0.1.4
+
+- Fixed VSIX packaging so the installed extension includes the runtime `fast-xml-parser` dependency required during activation.
+
 ## 0.1.3
 
 - Added `XML Dump: Selection` so valid XML selected inside any editor can open directly in the dump viewer.
