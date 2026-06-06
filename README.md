@@ -12,6 +12,7 @@ XML Dump visualizes raw XML as an interactive dump view inspired by `cfdump`. Op
 - Open valid XML from the clipboard with `XML Dump: Clipboard`.
 - Renders XML elements as nested tables with separate attribute and child rows.
 - Collapse or expand nested structures from the header row or the key column.
+- Expand or collapse every nested node at once with `Expand All` / `Collapse All` in the editor title while the dump panel is active.
 - Toggle between natural attribute order and `Sort Attrs A->Z` from the editor title while the dump panel is active.
 - Keeps leaf text and attributes easy to scan with distinct styling for elements, attributes, and scalar content.
 - Validates XML before opening the dump viewer so invalid content is rejected early with a parser diagnostic.
@@ -24,6 +25,7 @@ XML Dump visualizes raw XML as an interactive dump view inspired by `cfdump`. Op
 4. The viewer opens in a new tab.
 5. Explore nested nodes in the webview, collapse or expand nodes by clicking their key columns or headers.
 6. Use `Sort Attrs A->Z` or `Natural Attr Order` in the editor title while the dump panel is active.
+7. Use `Expand All` or `Collapse All` in the editor title to toggle every nested node at once.
 
 ## Changelog
 

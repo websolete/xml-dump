@@ -7,7 +7,7 @@
     "name": "Kevin Miller"
   },
   "license": "MIT",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/websolete/xml-dump.git"
@@ -66,19 +66,39 @@
         "command": "xmlDump.sortNatural",
         "title": "Natural Attr Order",
         "icon": "$(list-unordered)"
+      },
+      {
+        "command": "xmlDump.expandAll",
+        "title": "Expand All",
+        "icon": "$(expand-all)"
+      },
+      {
+        "command": "xmlDump.collapseAll",
+        "title": "Collapse All",
+        "icon": "$(collapse-all)"
       }
     ],
     "menus": {
       "editor/title": [
         {
           "command": "xmlDump.sortAlpha",
-          "when": "activeWebviewPanelId == xmlDump && !xmlDump.isSortedAlpha",
-          "group": "navigation"
+          "when": "activeWebviewPanelId == xmlDump",
+          "group": "navigation@1"
         },
         {
           "command": "xmlDump.sortNatural",
-          "when": "activeWebviewPanelId == xmlDump && xmlDump.isSortedAlpha",
-          "group": "navigation"
+          "when": "activeWebviewPanelId == xmlDump",
+          "group": "navigation@2"
+        },
+        {
+          "command": "xmlDump.expandAll",
+          "when": "activeWebviewPanelId == xmlDump",
+          "group": "navigation@3"
+        },
+        {
+          "command": "xmlDump.collapseAll",
+          "when": "activeWebviewPanelId == xmlDump",
+          "group": "navigation@4"
         }
       ],
       "explorer/context": [

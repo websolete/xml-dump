@@ -5,6 +5,8 @@ out/
 /schemas/
 /schemas/**
 .vscode/
-.github/*
+.github/
+.claude/
 !.github/workflows/
 !.github/workflows/**
+.mcp.json

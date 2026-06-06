@@ -34,7 +34,37 @@ window.addEventListener('message', (event) => {
     sortAttrs = Boolean(msg.alpha);
     renderRoot();
   }
+  if (msg && msg.command === 'setCollapsed') {
+    setAllCollapsed(Boolean(msg.collapsed));
+  }
 });
+
+/**
+ * Expand or collapse every nested node. The root node is left expanded so its
+ * top-level children stay visible while their contents collapse. Drives the same
+ * `collapsed` class + tbody display that the per-node click handlers toggle, so
+ * bulk and single-node toggling stay consistent.
+ * @param {boolean} collapsed
+ */
+function setAllCollapsed(collapsed) {
+  if (!rootContainer) { return; }
+
+  const rootTable = rootContainer.firstElementChild;          // keep root open
+  const tables = rootContainer.querySelectorAll('table.dump-table');
+  for (const table of tables) {
+    if (table === rootTable) { continue; }
+
+    const header = table.querySelector(':scope > thead .dump-header');
+    const tbody = table.querySelector(':scope > tbody');
+    // skip leaf/empty nodes that have no real toggle target
+    if (!header || !tbody || tbody.querySelector(':scope > tr > .dump-empty')) {
+      continue;
+    }
+
+    header.classList.toggle('collapsed', collapsed);
+    tbody.style.display = collapsed ? 'none' : '';
+  }
+}
 
 /**
  * Recursively build a DOM node for an XML element.
